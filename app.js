@@ -1,9 +1,11 @@
 
 const express = require('express');
 const mongoose = require('mongoose');
+const studentRoutes = require('./controller/studentcontroller');
 
 const app = express();
 app.use(express.json());
+app.use('/api',studentRoutes);
 
 let date = new Date();
 const Hours = date.getHours();
